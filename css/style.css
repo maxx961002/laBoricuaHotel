@@ -1,0 +1,429 @@
+/* --- FUENTES --- */
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('/assets/fonts/Caveat-SemiBold.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Bona Nova SC';
+    src: url('/assets/fonts/BonaNovaSC-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+}
+
+/* --- GENERAL --- */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1e4d0;
+    padding-top: 60px;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+a:visited {
+    color: inherit; 
+}
+a:hover {
+    color: #ff6702; 
+}
+
+/* --- NAVBAR --- */
+
+nav {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2b1a06;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- LOGO --- */
+.logo img {
+    width: 10%;
+    height: auto;
+    border-radius: 50%; 
+    position: absolute;
+    top: 5%; 
+    left: 85%;
+    transform: translateY(0%); 
+    z-index: 1001; 
+}
+
+/* --- TÍTULO PRINCIPAL --- */
+.tituloInicio {
+    position: absolute;
+    top: 21.5%;   
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Caveat', cursive;
+    font-weight: 800;
+    text-align: center;
+    color: #2b1a06;
+    font-size: 2em;
+    margin-top: 0; 
+    padding-top: 0;
+    background-color: #bd580562;
+    width: 90%;
+    margin-left: 0;
+}
+
+/* --- TÍTULOS GENERALES --- */
+h2 {
+    font-family: 'Bona Nova SC', serif;
+    font-size: 28px; 
+    color: #2b1a06;
+    text-align: center;
+    margin-top: 20px;
+    background: none; 
+    width: auto;
+}
+
+
+.ubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    font-size: 18px; 
+    padding: 10px;
+    width: 95%;
+    background-color: #bd580562;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+/* --- SECCIÓN SERVICIOS */
+
+.Servicios {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    gap: 10px; 
+    max-width: 90%;
+    margin: 200px auto 40px; 
+    background-color: #d4b28c;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+   
+.Servicios h1 {
+    font-size: 32px;
+    color: #2b1a06;
+    margin-bottom: 10px; 
+}
+
+.Servicios p {
+    font-size: 18px;
+    color: #2b1a06;
+    max-width: 75%;
+    margin: 0 auto; 
+    line-height: 1.5;
+}
+
+
+.servicio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 90%;
+    margin: 30px auto;
+    background-color: #d4b28c; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.servicio img {
+    width: 40%; 
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.servicio-texto {
+    width: 50%;
+    text-align: left;
+}
+
+
+.servicio:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+.servicio-texto h2 {
+    font-size: 24px;
+    color: #2b1a06;
+    margin-bottom: 10px;
+}
+
+.servicio-texto p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2b1a06;
+}
+
+/* --- HABITAIONES --- */
+
+.Habitaciones {
+    text-align: center;
+    padding: 60px 20px;
+    margin: 200px auto 40px;
+    background-image: url('/assets/img/bañera.png'); 
+    background-size: cover;
+    background-position: center;
+    color: #2b1a06;
+}
+
+.Habitaciones h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.Habitaciones p {
+    font-size: 18px;
+    max-width: 80%;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.habitacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 90%;
+    margin: 30px auto;
+    background-color: rgba(212, 178, 140, 0.9); 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.habitacion img {
+    width: 40%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.habitacion-texto {
+    width: 50%;
+    text-align: left;
+    color: #2b1a06;
+}
+
+
+.habitacion:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+.habitacion-texto h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.habitacion-texto p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* --- NOSOTROS  --- */
+
+.nosotros {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 90%;
+    margin: 30px auto;
+}
+
+
+.nosotros img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+
+.nosotros-texto {
+    background-color: rgba(212, 178, 140, 0.9); 
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    text-align: left;
+    color: #2b1a06;
+    margin-top: -40px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.nosotros-texto h2 {
+    font-size: 28px;
+    text-align: center;
+}
+
+.nosotros-texto p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* --- CONTACTO --- */
+
+.contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 90%;
+    margin: 50px auto;
+    margin-top: 200px;
+    background-color: rgba(212, 178, 140, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contacto-form {
+    width: 50%;
+    text-align: left;
+    color: #2b1a06;
+}
+
+.contacto-form h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contacto-form p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contacto-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contacto-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #2b1a06;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.contacto-form button:hover {
+    background-color: #533819;
+}
+
+
+.contacto-img img {
+    width: 75%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* --- FOOTER --- */
+
+footer {
+    background-color: #2b1a06; 
+    color: #f1e4d0; 
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-top: 40px;
+}
+
+
+footer p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+
+footer ul li a {
+    text-decoration: none;
+    color: #f1e4d0;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+
+footer ul li a:hover {
+    color: #d4b28c; 
+    text-decoration: underline;
+}
