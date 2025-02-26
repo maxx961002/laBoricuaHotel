@@ -22,29 +22,31 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f1e4d0;
+    background-color: #e6ceb0 !important;
     padding-top: 60px;
 }
 
 a {
-    text-decoration: none; 
-    color: inherit; 
+    text-decoration: none;
+    color: inherit;
 }
+
 a:visited {
-    color: inherit; 
+    color: inherit;
 }
+
 a:hover {
-    color: #ff6702; 
+    color: #ff6702;
 }
 
 /* --- NAVBAR --- */
 
 nav {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #2b1a06;
+    background-color: #815017;
     padding: 15px 0;
     text-align: center;
     z-index: 1000;
@@ -52,8 +54,8 @@ nav {
 
 .nav-links {
     display: flex;
-    justify-content: center; 
-    gap: 30px; 
+    justify-content: center;
+    gap: 30px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -79,85 +81,116 @@ img {
 .logo img {
     width: 10%;
     height: auto;
-    border-radius: 50%; 
+    border-radius: 50%;
     position: absolute;
-    top: 5%; 
+    top: 5%;
     left: 85%;
-    transform: translateY(0%); 
-    z-index: 1001; 
+    transform: translateY(0%);
+    z-index: 1001;
 }
 
 /* --- TÍTULO PRINCIPAL --- */
+
 .tituloInicio {
     position: absolute;
-    top: 21.5%;   
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Caveat', cursive;
-    font-weight: 800;
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Caveat', cursive; 
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    background: rgba(214, 108, 21, 0.404);
+    width: 80%;
+    padding: 10px 20px;
+    border-radius: 10px;
     text-align: center;
-    color: #2b1a06;
-    font-size: 2em;
-    margin-top: 0; 
-    padding-top: 0;
-    background-color: #bd580562;
-    width: 90%;
-    margin-left: 0;
+    z-index: 10;
 }
+
 
 /* --- TÍTULOS GENERALES --- */
 h2 {
     font-family: 'Bona Nova SC', serif;
-    font-size: 28px; 
+    font-size: 28px;
     color: #2b1a06;
     text-align: center;
     margin-top: 20px;
-    background: none; 
+    padding-top: 15px;
+    background: none;
     width: auto;
+}
+
+/* --- SECCIÓN INICIO --- */
+
+
+.carousel img {
+    margin-top: 10px;
+    height: 500px;
+    object-fit: cover;
 }
 
 
 .ubicacion {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 10px; 
-    font-size: 18px; 
-    padding: 10px;
-    width: 95%;
-    background-color: #bd580562;
+    justify-content: space-between;
+    background-color: rgba(214, 108, 21, 0.404);
+    padding: 30px;
+    margin: 40px auto;
     border-radius: 10px;
-    text-align: center;
+    max-width: 90%;
 }
+
+.textoUbicacion {
+    width: 50%;
+    text-align: left;
+    padding: 20px;;
+    font-size: 1.2rem;
+}
+
+.mapa {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.mapa iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
 
 
 /* --- SECCIÓN SERVICIOS */
 
 .Servicios {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 10px; 
+    gap: 10px;
     max-width: 90%;
-    margin: 200px auto 40px; 
+    margin: 200px auto 40px;
     background-color: #d4b28c;
     padding: 20px;
     border-radius: 10px;
 }
 
-   
+
 .Servicios h1 {
     font-size: 32px;
     color: #2b1a06;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .Servicios p {
     font-size: 18px;
     color: #2b1a06;
     max-width: 75%;
-    margin: 0 auto; 
+    margin: 0 auto;
     line-height: 1.5;
 }
 
@@ -169,13 +202,13 @@ h2 {
     gap: 20px;
     max-width: 90%;
     margin: 30px auto;
-    background-color: #d4b28c; 
+    background-color: #d4b28c;
     padding: 20px;
     border-radius: 10px;
 }
 
 .servicio img {
-    width: 40%; 
+    width: 40%;
     max-height: 300px;
     object-fit: cover;
     border-radius: 8px;
@@ -210,7 +243,7 @@ h2 {
     text-align: center;
     padding: 60px 20px;
     margin: 200px auto 40px;
-    background-image: url('/assets/img/bañera.png'); 
+    background-image: url('/assets/img/bañera.png');
     background-size: cover;
     background-position: center;
     color: #2b1a06;
@@ -235,7 +268,7 @@ h2 {
     gap: 20px;
     max-width: 90%;
     margin: 30px auto;
-    background-color: rgba(212, 178, 140, 0.9); 
+    background-color: rgba(212, 178, 140, 0.9);
     padding: 20px;
     border-radius: 10px;
 }
@@ -273,7 +306,7 @@ h2 {
 
 .nosotros {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -285,20 +318,20 @@ h2 {
 .nosotros img {
     width: 100%;
     max-height: 400px;
-    object-fit: cover; 
+    object-fit: cover;
     border-radius: 10px;
 }
 
 
 .nosotros-texto {
-    background-color: rgba(212, 178, 140, 0.9); 
+    background-color: rgba(212, 178, 140, 0.9);
     padding: 20px;
     border-radius: 10px;
     max-width: 80%;
     text-align: left;
     color: #2b1a06;
-    margin-top: -40px; 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    margin-top: -40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nosotros-texto h2 {
@@ -389,8 +422,8 @@ h2 {
 /* --- FOOTER --- */
 
 footer {
-    background-color: #2b1a06; 
-    color: #f1e4d0; 
+    background-color: #2b1a06;
+    color: #f1e4d0;
     text-align: center;
     padding: 20px 0;
     font-family: 'Space Grotesk', sans-serif;
@@ -424,6 +457,6 @@ footer ul li a {
 
 
 footer ul li a:hover {
-    color: #d4b28c; 
+    color: #d4b28c;
     text-decoration: underline;
 }
