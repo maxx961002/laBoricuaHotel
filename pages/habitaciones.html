@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Boricua Hotel & Spa</title>
+    <!-- Agregar Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Agregar CSS -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -12,56 +15,109 @@
 
     
     <header>
-        <nav>
+        <!-- 🔹 Navegación Original (Solo para PC) -->
+        <nav class="d-none d-lg-block">
             <ul class="nav-links">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./servicios.html">Servicios & Spa</a></li>
-                <li><a href="./habitaciones.html">Habitaciones</a></li>
-                <li><a href="./nosotros.html">Sobre Nosotros</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="servicios.html">Servicios & Spa</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
+            <div class="logo">
+
+                <img src="../assets/img/logo .jpg" alt="logo" class="logo-img">
+    
+            </div>
         </nav>
+    
+        <!-- 🔹 Navegación con Bootstrap (Solo para móviles) -->
+        <nav class="navbar navbar-expand-lg navbar-dark d-block d-lg-none">
+            <div class="container-fluid d-flex justify-content-between">
+                <!-- 🔹 Botón hamburguesa a la IZQUIERDA -->
+                <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
         
-
-        <section class="logo">
-
-            <img src="../assets/img/logo .jpg" alt="logo">
-
-        </section>
-
-        <section class="tituloInicio">
+                <!-- 🔹 Logo a la DERECHA -->
+                <a class="navbar-brand order-2" href="index.html">
+                    <img src="../assets/img/logo .jpg" alt="logo" class="logo-responsive">
+                </a>
+        
+                <!-- 🔹 Menú desplegable -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios & Spa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="habitaciones.html">Habitaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nosotros.html">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="tituloInicio">
 
             <h1>La Boricua Hotel & Spa</h1>
-
-        </section>
-
+        </div>
     </header>
     <body>
         
-        <section class="Habitaciones">
-            <h1>Habitaciones</h1>
-            <p>
-                En <strong>La Boricua Hotel & Spa</strong>, ofrecemos exclusivas habitaciones diseñadas 
-                para brindarte el máximo confort y una experiencia única frente al mar.
-                Elegí la que mejor se adapte a tu estilo de viaje.
-            </p>
-        </section>
-    
         <section class="habitacion">
-            <img src="../assets/img/habitaciondoble1.png" alt="Habitación con vista al mar">
+            <div id="carouselHabitacion1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../assets/img/habitaciondoble1.png" class="d-block w-100" alt="Habitación Vista al Mar">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/img/habitacionAlMar.png" class="d-block w-100" alt="Habitación con Balcón">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/img/habitacionAlMar2.png" class="d-block w-100" alt="Habitación de Lujo">
+                    </div>
+                </div>
+                <!-- Botones de navegación -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHabitacion1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselHabitacion1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        
             <div class="habitacion-texto">
-                <h2> Suite Vista al Mar</h2>
-                <p>Despertate con la brisa del mar y una vista inigualable. Equipada con balcón privado y hamacas.</p>
+                <h2>Suite Vista al Mar</h2>
+                <p>Despertate con la brisa del mar y una vista inigualable. Equipada con salida a la playa.</p>
             </div>
         </section>
-    
         
-        <section class="habitacion">
-            <div class="habitacion-texto">
-                <h2> Suite con Terraza</h2>
+        <section class="habitacion2">
+            <div class="habitacion-texto2">
+                <h2>Suite con Terraza</h2>
                 <p>Disfrutá de un espacio amplio con terraza privada, ideal para relajarte con una copa al atardecer.</p>
             </div>
-            <img src="../assets/img/habitaciondoble.png" alt="Suite con terraza">
+        
+            <div id="carouselHabitacion2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../assets/img/habitaciondoble.png" class="d-block w-100" alt="Habitación con terraza">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/img/habitacionTerraza.png" class="d-block w-100" alt="Interior Habitación">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../assets/img/habitacionTerraza2.png" class="d-block w-100" alt="Terraza con Vista al Mar">
+                    </div>
+                </div>
+                <!-- Botones de navegación -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHabitacion2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselHabitacion2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
         </section>
 
      <footer>
@@ -78,6 +134,8 @@
             
         
     </footer>
+<!-- Agregar Bootstrap JavaScript para que el menú funcione -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

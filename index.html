@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Boricua Hotel & Spa</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- Agregar Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Agregar CSS -->
+    <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
 <body>
 
-   
+
     <header>
-        <nav>
+        <!-- 🔹 Navegación Original (Solo para PC) -->
+        <nav class="d-none d-lg-block">
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="./pages/servicios.html">Servicios & Spa</a></li>
@@ -22,66 +25,92 @@
                 <li><a href="./pages/nosotros.html">Sobre Nosotros</a></li>
                 <li><a href="./pages/contacto.html">Contacto</a></li>
             </ul>
+            <div class="logo">
+
+                <img src="./assets/img/logo .jpg" alt="logo" class="logo-img">
+
+            </div>
         </nav>
-        
-         <section class="logo">
 
-            <img src="./assets/img/logo .jpg" alt="logo">
+        <!-- 🔹 Navegación con Bootstrap (Solo para móviles) -->
+        <nav class="navbar navbar-expand-lg navbar-dark d-block d-lg-none">
+            <div class="container-fluid d-flex justify-content-between">
+                <!-- 🔹 Botón hamburguesa a la IZQUIERDA -->
+                <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        </section>
-    
+                <!-- 🔹 Logo a la DERECHA -->
+                <a class="navbar-brand order-2" href="index.html">
+                    <img src="./assets/img/logo .jpg" alt="logo" class="logo-responsive">
+                </a>
 
+                <!-- 🔹 Menú desplegable -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/servicios.html">Servicios & Spa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/habitaciones.html">Habitaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/nosotros.html">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="tituloInicio">
+
+            <h1>La Boricua Hotel & Spa</h1>
+        </div>
     </header>
 
-   
-  
-        <section class="fondo">
-                <div class="tituloInicio">
 
-                    <h1>La Boricua Hotel & Spa</h1>
-                </div>
-
-                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-
-                    <!-- Indicadores (los puntitos debajo) -->
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                
-                    <!-- Contenedor de las imágenes -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./assets/img/hotel.png" class="d-block w-100" alt="Hotel">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./assets/img/costado.png" class="d-block w-100" alt="Vista lateral del hotel">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./assets/img/playa.png" class="d-block w-100" alt="Playa">
-                        </div>
-                    </div>
-                
-                    <!-- Botones de navegación (flechas) -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
-                </div>
-                
-        </section>
-   
-
+    <section class="fondo">
+        <div id="carouselInicio" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
     
-        <h2>¿Quieres conocer donde vas a hospedarte?</h2>
+            <!-- Indicadores (los puntitos debajo) -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselInicio" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselInicio" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselInicio" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+    
+            <!-- Contenedor de las imágenes -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/img/hotel.png" class="d-block w-100" alt="Hotel">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/img/costado.png" class="d-block w-100" alt="Vista lateral del hotel">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/img/playa.png" class="d-block w-100" alt="Playa">
+                </div>
+            </div>
+    
+            <!-- Botones de navegación (flechas) -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselInicio" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselInicio" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+    
+
+
+
+    <h2>¿Quieres conocer donde vas a hospedarte?</h2>
 
     <section class="ubicacion">
-    
+
         <div class="textoUbicacion">
 
             <p>
@@ -93,20 +122,20 @@
             </p>
 
         </div>
-        
-    <div class="mapa">
 
-        <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18034.861837336128!2d-65.45458281168696!3d18.147199839940875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c04c711d7b7e975%3A0x792d1d803f9bd340!2sVieques%2C%2000765%2C%20Puerto%20Rico!5e0!3m2!1ses-419!2sar!4v1738353881492!5m2!1ses-419!2sar"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="mapa">
 
-    </div>
-        
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18034.861837336128!2d-65.45458281168696!3d18.147199839940875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c04c711d7b7e975%3A0x792d1d803f9bd340!2sVieques%2C%2000765%2C%20Puerto%20Rico!5e0!3m2!1ses-419!2sar!4v1738353881492!5m2!1ses-419!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
 
     </section>
 
-    
+
     <footer>
         <p>📍 Vieques, Puerto Rico | 📞 +1 (787) 123-4567 | 📩 contacto@laboricuahotel.com</p>
         <p>&copy; 2025 La Boricua Hotel & Spa - Todos los derechos reservados</p>
@@ -118,12 +147,12 @@
             <li><a href="./pages/nosotros.html">Sobre Nosotros</a></li>
             <li><a href="./pages/contacto.html">Contacto</a></li>
         </ul>
-            
-        
+
+
     </footer>
-<!-- Agregar Bootstrap JavaScript para que el menú funcione -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Agregar Bootstrap JavaScript para que el menú funcione -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
-</html> 
+</html>

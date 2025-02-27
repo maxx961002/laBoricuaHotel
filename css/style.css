@@ -1,4 +1,4 @@
-/* --- FUENTES --- */
+/* FUENTES */
 
 @font-face {
     font-family: 'Caveat';
@@ -18,7 +18,7 @@
     font-weight: 400;
 }
 
-/* --- GENERAL --- */
+/*  GENERAL */
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -39,7 +39,7 @@ a:hover {
     color: #ff6702;
 }
 
-/* --- NAVBAR --- */
+/* NAVBAR */
 
 nav {
     position: absolute;
@@ -77,7 +77,7 @@ img {
     margin: 0 auto;
 }
 
-/* --- LOGO --- */
+/* LOGO */
 .logo img {
     width: 10%;
     height: auto;
@@ -88,8 +88,40 @@ img {
     transform: translateY(0%);
     z-index: 1001;
 }
+/* NAV RESPONSIVE */
 
-/* --- TÍTULO PRINCIPAL --- */
+@media (max-width: 991px) {
+    .logo-responsive {
+        position: absolute;
+        bottom: -40px; 
+        right: 10px; 
+        width: 70px; 
+        height: 70px;
+        border-radius: 50%; 
+        z-index: 1100; 
+    }
+
+    .navbar {
+        background-color: #8B5A2B; 
+        position: fixed;
+    }
+
+    .navbar-nav .nav-link {
+        color: white;
+        font-size: 16px;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .navbar-toggler-icon {
+        background-color: rgba(95, 48, 17, 0.507); 
+    }
+}
+
+
+/* TÍTULO PRINCIPAL */
 
 .tituloInicio {
     position: absolute;
@@ -109,8 +141,19 @@ img {
     z-index: 10;
 }
 
+@media (max-width: 991px) {
+    .tituloInicio {
+        top: 13%;  
+        font-size: 2rem;  
+        width: 90%;  
+        padding: 8px 15px; 
+        background: rgba(214, 108, 21, 0.6); 
+    }
+}
 
-/* --- TÍTULOS GENERALES --- */
+
+
+/* TÍTULOS GENERALES */
 h2 {
     font-family: 'Bona Nova SC', serif;
     font-size: 28px;
@@ -122,14 +165,21 @@ h2 {
     width: auto;
 }
 
-/* --- SECCIÓN INICIO --- */
+/* SECCIÓN INICIO */
 
-
-.carousel img {
+#carouselInicio {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
     margin-top: 10px;
-    height: 500px;
+}
+
+#carouselInicio .carousel-inner img {
+    width: 100%;
+    max-height: 400px; 
     object-fit: cover;
 }
+
 
 
 .ubicacion {
@@ -162,9 +212,26 @@ h2 {
     border-radius: 10px;
 }
 
+@media (max-width: 991px) {
+    .ubicacion {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .textoUbicacion {
+        width: 90%; 
+    }
+
+    .mapa iframe {
+        width: 200%; 
+        height: 300px; 
+    }
+}
 
 
-/* --- SECCIÓN SERVICIOS */
+/* SERVICIO 1 */
 
 .Servicios {
     display: flex;
@@ -237,72 +304,140 @@ h2 {
     color: #2b1a06;
 }
 
-/* --- HABITAIONES --- */
+/* RESPONSIVE SERVICIO 1  */
 
-.Habitaciones {
-    text-align: center;
-    padding: 60px 20px;
-    margin: 200px auto 40px;
-    background-image: url('/assets/img/bañera.png');
-    background-size: cover;
-    background-position: center;
-    color: #2b1a06;
+@media (max-width: 991px) {
+    .servicio {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .servicio-texto {
+        order: -1; 
+        padding: 0px;
+        width: 90%; 
+        text-align: center; 
+    }
+
+    .servicio-texto h2 {
+        font-size: 40px;
+        text-align: center;
+
+    }
+
+    .carousel {
+        max-width: 90%; 
+        margin: 0 auto; 
+    }
+
+    .carousel img {
+        width: 100%; 
+        border-radius: 10px; 
+    }
 }
 
-.Habitaciones h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
 
-.Habitaciones p {
-    font-size: 18px;
-    max-width: 80%;
-    margin: 0 auto;
-    line-height: 1.5;
-}
+/* SERVICIO 2 */
 
-.habitacion {
+.servicio2 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
-    max-width: 90%;
-    margin: 30px auto;
-    background-color: rgba(212, 178, 140, 0.9);
     padding: 20px;
+    background-color: #d4b28c;
     border-radius: 10px;
+    margin: 20px auto;
+    max-width: 90%;
 }
 
-.habitacion img {
-    width: 40%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
+.servicio-texto2 {
+    flex: 1;
+    padding: 20px;
+    text-align: left; 
 }
 
-.habitacion-texto {
+.carousel {
+    flex: 1;
+    max-width: 50%;
+    border-radius: 10px;
+    max-height: 400px; 
+    overflow: hidden;
+}
+
+@media (max-width: 991px) {
+    .servicio2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .servicio-texto2 {
+        order: -1;
+        padding: 20px;
+    }
+
+    .carousel {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .carousel img {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+/* HABITAIONES */
+.habitacion, .habitacion2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    background-color: #d4b28c;
+    border-radius: 10px;
+    margin: 100px auto;
+    max-width: 90%;
+
+}
+
+.habitacion-texto, .habitacion-texto2 {
     width: 50%;
-    text-align: left;
-    color: #2b1a06;
+    padding: 20px;
+}
+
+.habitacion img, .habitacion2 img {
+    max-height: 300px;
+    width: auto;
+    object-fit: cover;
+}
+
+/* HABITACION RESPONSIVE */
+
+@media (max-width: 991px) {
+    .habitacion, .habitacion2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .habitacion-texto, .habitacion-texto2 {
+        order: 1;
+        width: 90%;
+        padding: 10px;
+    }
+
+    .carousel {
+        order: 2;
+        width: 90%;
+    }
+
+    .carousel img {
+        max-height: 250px;
+        object-fit: cover;
+    }
 }
 
 
-.habitacion:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-
-.habitacion-texto h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.habitacion-texto p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* --- NOSOTROS  --- */
+/* NOSOTROS */
 
 .nosotros {
     display: flex;
@@ -345,81 +480,131 @@ h2 {
 }
 
 
-/* --- CONTACTO --- */
+/* CONTACTO */
 
-.contacto {
+.contacto-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
     max-width: 90%;
     margin: 50px auto;
-    margin-top: 200px;
-    background-color: rgba(212, 178, 140, 0.9);
-    padding: 30px;
+}
+
+.video-contacto {
+    width: 80%;
     border-radius: 10px;
+    object-fit: cover;
+}
+
+.contacto-texto {
+    width: 45%;
+    margin-top: 20px;
 }
 
 .contacto-form {
-    width: 50%;
-    text-align: left;
-    color: #2b1a06;
-}
-
-.contacto-form h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.contacto-form p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.contacto-form label {
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .contacto-form input,
 .contacto-form textarea {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
 }
 
 .contacto-form button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #2b1a06;
+    background-color: #8B5A2B;
     color: white;
+    padding: 10px;
     border: none;
+    cursor: pointer;
     border-radius: 5px;
-    font-size: 16px;
-    margin-top: 15px;
+}
+
+.telefono-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.telefono-container select {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
     cursor: pointer;
 }
 
-.contacto-form button:hover {
-    background-color: #533819;
+
+.telefono-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 
-.contacto-img img {
-    width: 75%;
-    max-height: 450px;
-    object-fit: cover;
-    border-radius: 8px;
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 
-/* --- FOOTER --- */
+
+@media (max-width: 991px) {
+    .contacto-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .video-contacto {
+        width: 100%;
+    }
+
+    .contacto-texto {
+        width: 100%;
+    }
+
+    .contacto-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contacto-form input,
+    .contacto-form select,
+    .contacto-form textarea {
+        width: 100%;
+    }
+
+    .telefono-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .telefono-container select,
+    .telefono-container input {
+        width: 100%;
+    }
+
+    .contacto-form button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+
+/* FOOTER */
 
 footer {
     background-color: #2b1a06;

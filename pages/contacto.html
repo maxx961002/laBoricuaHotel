@@ -5,71 +5,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Boricua Hotel & Spa</title>
+    <!-- Agregar Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Agregar CSS -->
     <link rel="stylesheet" href="../css/style.css">
 
 <body>
 
     
     <header>
-        <nav>
+        <!-- 🔹 Navegación Original (Solo para PC) -->
+        <nav class="d-none d-lg-block">
             <ul class="nav-links">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./servicios.html">Servicios & Spa</a></li>
-                <li><a href="./habitaciones.html">Habitaciones</a></li>
-                <li><a href="./nosotros.html">Sobre Nosotros</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="servicios.html">Servicios & Spa</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
+            <div class="logo">
+
+                <img src="../assets/img/logo .jpg" alt="logo" class="logo-img">
+    
+            </div>
         </nav>
+    
+        <!-- 🔹 Navegación con Bootstrap (Solo para móviles) -->
+        <nav class="navbar navbar-expand-lg navbar-dark d-block d-lg-none">
+            <div class="container-fluid d-flex justify-content-between">
+                <!-- 🔹 Botón hamburguesa a la IZQUIERDA -->
+                <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
         
-
-        <section class="logo">
-
-            <img src="../assets/img/logo .jpg" alt="logo">
-
-        </section>
-
-        <section class="tituloInicio">
+                <!-- 🔹 Logo a la DERECHA -->
+                <a class="navbar-brand order-2" href="index.html">
+                    <img src="../assets/img/logo .jpg" alt="logo" class="logo-responsive">
+                </a>
+        
+                <!-- 🔹 Menú desplegable -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios & Spa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="habitaciones.html">Habitaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nosotros.html">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="tituloInicio">
 
             <h1>La Boricua Hotel & Spa</h1>
-
-        </section>
-
+        </div>
     </header>
 
     <body>
 
-        <section class="contacto">
-            <div class="contacto-form">
-                <h2> Contactanos</h2>
-                <p>Si tenés alguna consulta o querés reservar tu estadía, completá el formulario y nos pondremos en contacto contigo.</p>
-    
-                <form>
+        <div class="contacto-container">
+            <!-- Video de fondo -->
+            <div class="video-wrapper">
+                <video class="video-contacto" autoplay muted loop>
+                    <source src="../assets/videos/videoVieques.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+            </div>
+        
+            <!-- Contenido de contacto -->
+            <div class="contacto-texto">
+                <h2 class="text-center mb-3">¿Listo para una escapada inolvidable?</h2>
+<p class="text-center text-muted">
+    Sumergite en la tranquilidad de <strong>La Boricua Hotel & Spa</strong>, un refugio exclusivo donde el lujo y la naturaleza se fusionan.  
+    <br><br>
+    Completá el formulario y nuestro equipo se pondrá en contacto para brindarte toda la información y asegurar tu reserva. ¡Tu experiencia en el paraíso comienza aquí!
+</p>
+
+                <!-- Formulario -->
+                <form class="contacto-form">
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" required>
-    
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-
+                
+                    <!-- 🔹 Teléfono con selección de código de país -->
                     <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" required>
-
-                    <label for="fechas de ingreso">Fechas de ingreso</label>
-                    <input type="date" id="fechas de ingreso" name="fechas de ingreso" required>
-
-                    <label for="fechas de salida">Fechas de salida</label>
-                    <input type="date" id="fechas de salida" name="fechas de salida" required>
-    
+                    <div class="telefono-container">
+                        <select id="codigo-pais" name="codigo-pais">
+                            <option value="+54">🇦🇷 Argentina (+54)</option>
+                            <option value="+1">🇺🇸 USA (+1)</option>
+                            <option value="+34">🇪🇸 España (+34)</option>
+                            <option value="+52">🇲🇽 México (+52)</option>
+                            <option value="+57">🇨🇴 Colombia (+57)</option>
+                            <option value="+506">🇨🇷 Costa Rica (+506)</option>
+                            <option value="+507">🇵🇦 Panamá (+507)</option>
+                            <option value="+51">🇵🇪 Perú (+51)</option>
+                            <option value="+56">🇨🇱 Chile (+56)</option>
+                            <option value="+598">🇺🇾 Uruguay (+598)</option>
+                        </select>
+                        <input type="tel" id="telefono" name="telefono" required placeholder="123456789">
+                    </div>
+                
+                    <!-- 🔹 Fechas de ingreso y egreso -->
+                    <label for="fecha-ingreso">Fecha de Ingreso</label>
+                    <input type="date" id="fecha-ingreso" name="fecha-ingreso" required>
+                
+                    <label for="fecha-egreso">Fecha de Egreso</label>
+                    <input type="date" id="fecha-egreso" name="fecha-egreso" required>
+                
+                    <!-- 🔹 Mensaje -->
                     <label for="mensaje">Mensaje</label>
                     <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-    
+                
+                    <!-- 🔹 Botón de Enviar -->
                     <button type="submit">Enviar</button>
                 </form>
+                
             </div>
-    
-            <div class="contacto-img">
-                <img src="../assets/img/mar.png" alt="Imagen de contacto">
-            </div>
+        </div>
+        
         </section>
+        
    
      <footer>
 
@@ -84,6 +139,8 @@
         </ul>
         
     </footer>
+<!-- Agregar Bootstrap JavaScript para que el menú funcione -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
