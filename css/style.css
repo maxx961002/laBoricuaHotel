@@ -645,3 +645,28 @@ footer ul li a:hover {
     color: #d4b28c;
     text-decoration: underline;
 }
+
+/* RESPONSIVE FOOTER */
+
+@media (max-width: 991px) {
+    footer ul {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 10px; 
+    }
+
+    footer ul li {
+        display: inline-block; 
+        margin: 5px; 
+    }
+
+    footer ul li a {
+        font-size: 14px; 
+        padding: 5px; 
+    }
+
+    footer p {
+        font-size: 14px; 
+        line-height: 1.3; 
+    }
+}
