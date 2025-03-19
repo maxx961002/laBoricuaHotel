@@ -1,0 +1,13 @@
+@mixin seccion-base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    max-width: 90%;
+    margin: 100px auto 40px;
+    background-color: #d4b28c; // o usa tu variable si tenés: variables.$color-seccion
+    padding: 20px;
+    border-radius: 10px;
+  }
+  

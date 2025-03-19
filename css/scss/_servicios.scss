@@ -1,0 +1,103 @@
+@use 'variables';
+@use 'mixins';
+
+.Servicios {
+    @include mixins.seccion-base;
+    margin-top: 170px; // 👈 Este valor lo podés ajustar si querés más espacio
+    animation: slideUp 1.8s ease;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+  
+    h2 {
+      font-size: 28px;
+      color: variables.$color-texto;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+  
+    p {
+      font-size: 18px;
+      max-width: 75%;
+      margin: 0 auto;
+      line-height: 1.5;
+      color: variables.$color-texto;
+    }
+  }
+  
+
+.servicio,
+.servicio2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: variables.$color-seccion;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 90%;
+  gap: 20px;
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .carousel {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .servicio,
+.servicio2 {
+  animation: fadeUp 1.2s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s; 
+}
+
+  .servicio-texto,
+  .servicio-texto2 {
+    flex: 1;
+    text-align: left;
+    color: variables.$color-texto;
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      animation: slideInLeft 1s ease;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.servicio:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+// RESPONSIVE
+@media (max-width: 991px) {
+    .Servicios {
+      margin-top: 150px;
+    }
+  .servicio,
+  .servicio2 {
+    flex-direction: column;
+    text-align: center;
+
+    .servicio-texto,
+    .servicio-texto2 {
+      text-align: center;
+      width: 90%;
+    }
+
+    .carousel {
+      max-width: 90%;
+    }
+  }
+}

@@ -29,7 +29,7 @@
   #carouselInicio {
     .carousel-inner {
       img {
-        max-height: 200px;
+        height: 500px;
         border-radius: 8px;
       }
     }
@@ -73,7 +73,8 @@ h2 {
     text-align: center;
     color: #2b1a06;
     font-family: 'Bona Nova SC', serif;
-  
+    animation: slideInLeft 1s ease-out;
+
     @media (max-width: 991px) {
       font-size: 24px;
       margin-top: 60px;

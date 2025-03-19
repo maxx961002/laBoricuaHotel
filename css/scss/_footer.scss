@@ -1,0 +1,60 @@
+@use 'variables';
+
+footer {
+  background-color: variables.$color-footer;
+  color: variables.$color-texto-footer;
+  text-align: center;
+  padding: 20px 0;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-top: 40px;
+
+  p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+
+    li a {
+      text-decoration: none;
+      color: variables.$color-texto-footer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: variables.$color-hover-footer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+
+      li {
+        display: inline-block;
+        margin: 5px;
+      }
+
+      li a {
+        font-size: 14px;
+        padding: 5px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+  }
+}

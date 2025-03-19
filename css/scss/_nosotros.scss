@@ -1,0 +1,59 @@
+@use 'variables';
+@use 'mixins';
+
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 90%;
+  margin: 50px auto;
+  animation: fadeInUp 1.2s ease both;
+
+  img {
+    width: 100%;
+    margin: 15px 0;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease;
+  }
+
+  .nosotros-texto {
+    background-color: rgba(variables.$color-seccion, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 85%;
+    margin-top: -80px;
+    text-align: left;
+    color: variables.$color-texto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    animation: slideInLeft 1.2s ease;
+
+    h2 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+    .nosotros {
+      .nosotros-texto {
+        margin-top: -80px;
+        text-align: center;
+      }
+    }
+    img {
+      height: 600px;
+    }
+  }
+  
