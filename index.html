@@ -7,6 +7,8 @@
     <title>La Boricua Hotel & Spa</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 
 </head>
 
@@ -61,7 +63,7 @@
 
     <section class="fondo">
         <div id="carouselInicio" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-    
+
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselInicio" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -70,7 +72,7 @@
                 <button type="button" data-bs-target="#carouselInicio" data-bs-slide-to="2"
                     aria-label="Slide 3"></button>
             </div>
-    
+
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="./assets/img/hotel.png" class="d-block w-100" alt="Hotel">
@@ -82,7 +84,7 @@
                     <img src="./assets/img/playa.png" class="d-block w-100" alt="Playa">
                 </div>
             </div>
-    
+
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselInicio" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
@@ -93,15 +95,14 @@
             </button>
         </div>
     </section>
-    
+
 
 
 
     <h2 class="aparecer-h2">¿Quieres conocer dónde vas a hospedarte?</h2>
 
 
-    <section class="ubicacion">
-
+    <section class="ubicacion" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
         <div class="textoUbicacion">
 
             <p>
@@ -141,6 +142,11 @@
 
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

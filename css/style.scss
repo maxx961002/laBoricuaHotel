@@ -2,6 +2,7 @@
 
 @use 'scss/variables';
 @use 'scss/navbar';
+@use 'scss/base';
 @use 'scss/header';
 @use 'scss/animations';
 @use 'scss/home';
@@ -10,3 +11,4 @@
 @use 'scss/mixins';
 @use 'scss/habitaciones';
 @use 'scss/nosotros';
+@use 'scss/contacto';

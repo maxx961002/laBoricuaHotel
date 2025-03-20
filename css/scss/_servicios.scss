@@ -2,28 +2,33 @@
 @use 'mixins';
 
 .Servicios {
-    @include mixins.seccion-base;
-    margin-top: 170px; // 👈 Este valor lo podés ajustar si querés más espacio
-    animation: slideUp 1.8s ease;
-    animation-delay: 0.5s;
-    animation-fill-mode: both;
-  
-    h2 {
-      font-size: 28px;
-      color: variables.$color-texto;
-      margin-top: 10px;
-      margin-bottom: 15px;
-    }
-  
-    p {
-      font-size: 18px;
-      max-width: 75%;
-      margin: 0 auto;
-      line-height: 1.5;
-      color: variables.$color-texto;
-    }
+  @include mixins.seccion-base;
+  margin-top: 170px; // 👈 Este valor lo podés ajustar si querés más espacio
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
   }
-  
+
+
+  h2 {
+    font-size: 28px;
+    color: variables.$color-texto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 18px;
+    max-width: 75%;
+    margin: 0 auto;
+    line-height: 1.5;
+    color: variables.$color-texto;
+  }
+}
+
 
 .servicio,
 .servicio2 {
@@ -36,9 +41,18 @@
   margin: 40px auto;
   max-width: 90%;
   gap: 20px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+  }
+
 
   img {
     width: 100%;
+    height: 400px;
     border-radius: 10px;
     object-fit: cover;
     animation: fadeIn 1s ease-in-out;
@@ -50,12 +64,13 @@
   }
 
   .servicio,
-.servicio2 {
-  animation: fadeUp 1.2s ease-out;
-  opacity: 0;
-  animation-fill-mode: forwards;
-  animation-delay: 0.3s; 
-}
+  .servicio2 {
+    animation: fadeUp 1.2s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+
+  }
 
   .servicio-texto,
   .servicio-texto2 {
@@ -82,9 +97,10 @@
 
 // RESPONSIVE
 @media (max-width: 991px) {
-    .Servicios {
-      margin-top: 150px;
-    }
+  .Servicios {
+    margin-top: 150px;
+  }
+
   .servicio,
   .servicio2 {
     flex-direction: column;
