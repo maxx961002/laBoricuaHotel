@@ -521,12 +521,27 @@ footer ul li a:hover {
   transform: translateY(-15px);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
-.habitacion img,
-.habitacion2 img {
+.habitacion .carousel,
+.habitacion2 .carousel {
+  flex: 1;
+  max-width: 50%;
+}
+.habitacion .carousel-inner,
+.habitacion2 .carousel-inner {
   height: 400px;
+  overflow: hidden;
+}
+.habitacion .carousel-item,
+.habitacion2 .carousel-item {
+  height: 100%;
+}
+.habitacion .carousel-item img,
+.habitacion2 .carousel-item img {
+  height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  transition: transform 0.5s ease;
+  display: block;
 }
 .habitacion .habitacion-texto,
 .habitacion .habitacion-texto2,
@@ -571,11 +586,17 @@ footer ul li a:hover {
   .habitacion2 .carousel {
     order: 2;
     width: 90%;
+    max-width: 500px;
   }
-  .habitacion .carousel img,
-  .habitacion2 .carousel img {
-    max-height: 250px;
+  .habitacion .carousel-inner,
+  .habitacion2 .carousel-inner {
+    height: 300px;
+  }
+  .habitacion .carousel-item img,
+  .habitacion2 .carousel-item img {
+    height: 100%;
     object-fit: cover;
+    border-radius: 10px;
   }
 }
 .nosotros {
