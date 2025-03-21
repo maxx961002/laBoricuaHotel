@@ -1,3 +1,4 @@
+@use "sass:color";
 @use 'variables';
 @use 'mixins';
 
@@ -85,7 +86,8 @@
         transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: darken(variables.$color-navbar, 10%);
+            background-color: color.adjust(variables.$color-navbar, $lightness: -10%);
+
         }
     }
 

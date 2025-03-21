@@ -3,7 +3,7 @@
 
 .Servicios {
   @include mixins.seccion-base;
-  margin-top: 170px; // 👈 Este valor lo podés ajustar si querés más espacio
+  margin-top: 170px; 
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 

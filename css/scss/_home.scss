@@ -21,11 +21,11 @@
       max-height: 700px;
       object-fit: cover;
       border-radius: 10px;
-      transition: transform 0.3s ease-in-out; // transición suave
+      transition: transform 0.3s ease-in-out; 
     }
 
     img:hover {
-      transform: scale(1.02); // efecto zoom suave al pasar el mouse
+      transform: scale(1.02); 
     }
   }
 }
