@@ -1,13 +1,14 @@
-@mixin seccion-base {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    max-width: 90%;
-    margin: 100px auto 40px;
-    background-color: #d4b28c; 
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
+@use "variables";
+
+@mixin seccion-base($bg-color: variables.$color-seccion, $padding: 20px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  max-width: 90%;
+  margin: 100px auto 40px;
+  background-color: $bg-color;
+  padding: $padding;
+  border-radius: 10px;
+}

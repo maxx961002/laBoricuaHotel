@@ -70,6 +70,20 @@ body {
   overflow-x: hidden;
 }
 
+.video-contacto, .contacto-texto, .nosotros img, .nosotros .nosotros-texto, .habitacion,
+.habitacion2, .servicio,
+.servicio2, #carouselInicio, .ubicacion, .ubicacion .mapa {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.video-contacto:hover, .contacto-texto:hover, .nosotros img:hover, .nosotros .nosotros-texto:hover, .habitacion:hover,
+.habitacion2:hover, .servicio:hover,
+.servicio2:hover, #carouselInicio:hover, .ubicacion:hover, .ubicacion .mapa:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+}
+
 .tituloInicio {
   position: absolute;
   top: 15%;
@@ -105,12 +119,6 @@ body {
   max-width: 100%;
   height: auto;
   object-fit: cover;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-#carouselInicio:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
 #carouselInicio .carousel-inner img {
   width: 100%;
@@ -138,12 +146,6 @@ body {
   margin: 40px auto;
   border-radius: 10px;
   max-width: 90%;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.ubicacion:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
 .ubicacion .textoUbicacion {
   width: 50%;
@@ -156,12 +158,6 @@ body {
   width: 50%;
   display: flex;
   justify-content: center;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.ubicacion .mapa:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
 .ubicacion .mapa iframe {
   width: 100%;
@@ -292,13 +288,6 @@ footer ul li a:hover {
   margin: 40px auto;
   max-width: 90%;
   gap: 20px;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.servicio:hover,
-.servicio2:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
 .servicio img,
 .servicio2 img {
@@ -383,13 +372,6 @@ footer ul li a:hover {
   max-width: 90%;
   gap: 20px;
   padding: 20px;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.habitacion:hover,
-.habitacion2:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
 .habitacion .carousel,
 .habitacion2 .carousel {
@@ -485,13 +467,6 @@ footer ul li a:hover {
   height: 500px;
   object-fit: cover;
   border-radius: 10px;
-  animation: fadeIn 1.5s ease;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.nosotros img:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
 .nosotros .nosotros-texto {
   background-color: rgba(212, 178, 140, 0.9);
@@ -501,21 +476,14 @@ footer ul li a:hover {
   margin-top: -80px;
   text-align: left;
   color: #000000;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   animation: slideInLeft 1.2s ease;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.nosotros .nosotros-texto:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
-}
-.nosotros .nosotros-texto h2 {
+.nosotros h2 {
   font-size: 32px;
   text-align: center;
   margin-bottom: 20px;
 }
-.nosotros .nosotros-texto p {
+.nosotros p {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 15px;
@@ -546,13 +514,6 @@ footer ul li a:hover {
   height: 900px;
   border-radius: 10px;
   object-fit: cover;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.video-contacto:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
 
 .video-wrapper {
@@ -567,12 +528,6 @@ footer ul li a:hover {
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   color: #000000;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.contacto-texto:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
 .contacto-texto h2 {
   font-size: 28px;

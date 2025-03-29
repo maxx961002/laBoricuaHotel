@@ -1,5 +1,6 @@
 @use 'variables';
 @use 'mixins';
+@use 'base';
 
 .Servicios {
   @include mixins.seccion-base;
@@ -32,6 +33,7 @@
 
 .servicio,
 .servicio2 {
+  @extend %tarjeta-flotante;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -41,13 +43,7 @@
   margin: 40px auto;
   max-width: 90%;
   gap: 20px;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
-  }
+ 
 
 
   img {

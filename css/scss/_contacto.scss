@@ -1,6 +1,7 @@
 @use "sass:color";
 @use 'variables';
 @use 'mixins';
+@use 'base';
 
 .contacto-container {
     display: flex;
@@ -13,19 +14,14 @@
 }
 
 .video-contacto {
+    @extend %tarjeta-flotante;
     margin-top: 140px;
     margin-left: 30px;
     width: 100%;
     height: 900px;
     border-radius: 10px;
     object-fit: cover;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-    &:hover {
-      transform: translateY(-15px);
-      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
-    }
+    
 }
 
 .video-wrapper {
@@ -33,6 +29,7 @@
 }
 
 .contacto-texto {
+    @extend %tarjeta-flotante;
     margin-top: 163px;
     flex: 1;
     background-color: rgba(variables.$color-seccion, 0.95);
@@ -40,13 +37,7 @@
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     color: variables.$color-texto;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
-  }
+  
 
     h2 {
         font-size: 28px;
