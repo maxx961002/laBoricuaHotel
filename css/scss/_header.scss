@@ -1,11 +1,17 @@
 // Importamos variables
 @use 'variables';
 
+.contenedor-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; 
+  position: relative;
+  z-index: 10;
+  margin-top: 50px; 
+}
+
 .tituloInicio {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
   font-size: 2.5rem;
   font-family: 'Caveat', cursive;
@@ -19,11 +25,11 @@
   z-index: 10;
 
   @media (max-width: 991px) {
-    top: 13%;
     font-size: 2rem;
     width: 90%;
     padding: 8px 15px;
     background: rgba(214, 108, 21, 0.6);
+  }
   }
   .tituloInicio {
     padding-bottom: 40px;
